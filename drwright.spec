@@ -49,8 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-# isn't COPYING just GPL?
-%doc AUTHORS COPYING ChangeLog NEWS README
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/drwright.schemas
 %{_datadir}/applications/*.desktop
