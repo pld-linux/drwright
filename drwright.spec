@@ -1,4 +1,5 @@
 Summary:	A program that reminds you to take wrist breaks
+Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
 Version:	0.14
 Release:	1
@@ -6,17 +7,22 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://drwright.codefactory.se/download/%{name}-%{version}.tar.gz
 URL:		http://drwright.codefactory.se/
-BuildRequires:	pango-devel >= 1.0.99
-BuildRequires:	gtk+2-devel >= 2.0.4
 BuildRequires:	GConf2-devel >= 1.2.0
-BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	Xft-devel
 BuildRequires:	fontconfig
+BuildRequires:	gtk+2-devel >= 2.0.4
+BuildRequires:	libglade2-devel >= 2.0.0
+BuildRequires:	pango-devel >= 1.0.99
+Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 DrWright is a program that forces you to take wrist breaks to rest
 your hands.
+
+%description -l pl
+DrWright to program zmuszaj±cy do rozlu¼nienia nadgarstków, aby daæ
+odpocz±æ d³oniom.
 
 %prep
 %setup -q
@@ -31,7 +37,7 @@ your hands.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -43,9 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-
+# isn't COPYING just GPL?
 %doc AUTHORS COPYING ChangeLog NEWS README
-
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/drwright.schemas
 %{_datadir}/applications/*.desktop
