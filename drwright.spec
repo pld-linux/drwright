@@ -17,7 +17,7 @@ BuildRequires:	fontconfig
 BuildRequires:	gtk+2-devel >= 2.0.4
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel
-BuildRequires:	pango-devel >= 1.0.99
+BuildRequires:	pango-devel >= 1:1.0.99
 BuildRequires:	xft-devel
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
