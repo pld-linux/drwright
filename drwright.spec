@@ -2,12 +2,13 @@ Summary:	A program that reminds you to take wrist breaks
 Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
 Version:	0.17
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
 # Source0-md5:	e23acadea9bfede4b22611b058b80648
 Patch0:		%{name}-schemas.patch
+Patch1:		%{name}-pl.po.patch
 URL:		http://www.imendio.com/projects/drwright/
 BuildRequires:	GConf2-devel >= 1.2.0
 BuildRequires:	autoconf
@@ -15,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	fontconfig
 BuildRequires:	gtk+2-devel >= 2.0.4
 BuildRequires:	libglade2-devel >= 2.0.0
+BuildRequires:	libgnomeui-devel
 BuildRequires:	pango-devel >= 1.0.99
 BuildRequires:	xft-devel
 Requires(post):	GConf2
@@ -31,11 +33,12 @@ odpocz±æ d³oniom.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
-%{__automake}
 %{__autoconf}
+%{__automake}
 %configure \
 	--disable-schemas-install
 
