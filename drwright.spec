@@ -1,11 +1,12 @@
 Summary:	A program that reminds you to take wrist breaks
 Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
-Version:	0.14
+Version:	0.14.91
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://drwright.codefactory.se/download/%{name}-%{version}.tar.gz
+Patch0:		%{name}-schemas.patch
 URL:		http://drwright.codefactory.se/
 BuildRequires:	GConf2-devel >= 1.2.0
 BuildRequires:	Xft-devel
@@ -26,10 +27,14 @@ odpocz±æ d³oniom.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure \
-	--disable-schemas-install
+    --disable-schemas-install 
 
 %{__make}
 
