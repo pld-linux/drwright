@@ -1,7 +1,7 @@
 Summary:	A program that reminds you to take wrist breaks
 Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
-Version:	0.15
+Version:	0.16
 Release:	1
 License:	GPL
 Group:		Applications/System
