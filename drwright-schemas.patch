@@ -1,0 +1,10 @@
+diff -urN drwright-0.14.91.orig/src/Makefile.am drwright-0.14.91/src/Makefile.am
+--- drwright-0.14.91.orig/src/Makefile.am	Fri Feb 21 00:23:23 2003
++++ drwright-0.14.91/src/Makefile.am	Fri Feb 21 00:23:56 2003
+@@ -37,6 +37,5 @@
+ glade_DATA = drw-preferences.glade
+ 
+ install-data-local:
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+ 
+ EXTRA_DIST = $(schema_DATA) $(image_DATA) $(glade_DATA)
