@@ -1,23 +1,25 @@
 Summary:	A program that reminds you to take wrist breaks
 Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
-Version:	0.17
-Release:	3
+Version:	0.18
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
-# Source0-md5:	e23acadea9bfede4b22611b058b80648
-Patch0:		%{name}-schemas.patch
-Patch1:		%{name}-pl.po.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	5056d36520b0a506e5bf3211f08315b8
+Patch0:		%{name}-locale-names.patch
 URL:		http://www.imendio.com/projects/drwright/
 BuildRequires:	GConf2-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	dbus-glib-devel >= 0.22
 BuildRequires:	fontconfig
-BuildRequires:	gtk+2-devel >= 2.0.4
+BuildRequires:	gtk+2-devel >= 2.2.0
+Buildrequires:	intltool >= 0.29
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnomeui-devel
-BuildRequires:	pango-devel >= 1:1.0.99
+BuildRequires:	libgnomeui-devel >= 2.0.0
+BuildRequires:	pango-devel >= 1:1.2.0
+BuildRequires:	pkgconfig
 BuildRequires:	xft-devel
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +35,8 @@ odpocz±æ d³oniom.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
+
+mv po/{no,nb}.po
 
 %build
 %{__aclocal}
@@ -49,7 +52,8 @@ odpocz±æ d³oniom.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %find_lang %{name}
 
