@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://drwright.codefactory.se/download/%{name}-%{version}.tar.gz
+# Source0-md5:	f413701f8ab87b1ee016c655f304a69e
 Patch0:		%{name}-schemas.patch
 URL:		http://drwright.codefactory.se/
 BuildRequires:	GConf2-devel >= 1.2.0
