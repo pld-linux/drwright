@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.22
 BuildRequires:	fontconfig-devel
 BuildRequires:	gtk+2-devel >= 2:2.2.0
-Buildrequires:	intltool >= 0.29
+BuildRequires:	intltool >= 0.29
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRequires:	pango-devel >= 1:1.2.0
