@@ -10,13 +10,13 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.
 Patch0:		%{name}-schemas.patch
 URL:		http://www.imendio.com/projects/drwright/
 BuildRequires:	GConf2-devel >= 1.2.0
-BuildRequires:	xft-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	fontconfig
 BuildRequires:	gtk+2-devel >= 2.0.4
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	pango-devel >= 1.0.99
+BuildRequires:	xft-devel
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -60,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/drwright.schemas
-%{_datadir}/applications/*.desktop
+%{_desktopdir}/*.desktop
 %{_datadir}/drwright
