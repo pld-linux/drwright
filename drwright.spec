@@ -2,7 +2,7 @@ Summary:	A program that reminds you to take wrist breaks
 Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
 Name:		drwright
 Version:	0.17
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
@@ -39,7 +39,8 @@ odpocz±æ d³oniom.
 %configure \
 	--disable-schemas-install
 
-%{__make} CFLAGS="%{rpmcflags} -fno-strict-aliasing"
+%{__make} \
+	CFLAGS="%{rpmcflags} -fno-strict-aliasing"
 
 %install
 rm -rf $RPM_BUILD_ROOT
