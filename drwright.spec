@@ -10,6 +10,8 @@ Patch0:		%{name}-schemas.patch
 URL:		http://drwright.codefactory.se/
 BuildRequires:	GConf2-devel >= 1.2.0
 BuildRequires:	Xft-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	fontconfig
 BuildRequires:	gtk+2-devel >= 2.0.4
 BuildRequires:	libglade2-devel >= 2.0.0
@@ -34,7 +36,7 @@ odpocz±æ d³oniom.
 %{__automake}
 %{__autoconf}
 %configure \
-    --disable-schemas-install 
+	--disable-schemas-install
 
 %{__make}
 
