@@ -5,7 +5,7 @@ Version:	0.18
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.18/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/drwright/0.18/%{name}-%{version}.tar.bz2
 # Source0-md5:	5056d36520b0a506e5bf3211f08315b8
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.imendio.com/projects/drwright/
@@ -13,7 +13,7 @@ BuildRequires:	GConf2-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.22
-BuildRequires:	fontconfig
+BuildRequires:	fontconfig-devel
 BuildRequires:	gtk+2-devel >= 2:2.2.0
 Buildrequires:	intltool >= 0.29
 BuildRequires:	libglade2-devel >= 2.0.0
