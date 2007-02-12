@@ -1,5 +1,5 @@
 Summary:	A program that reminds you to take wrist breaks
-Summary(pl):	Program przypominaj±cy, ¿eby daæ odpocz±æ nadgarstkom
+Summary(pl.UTF-8):   Program przypominajÄ…cy, Å¼eby daÄ‡ odpoczÄ…Ä‡ nadgarstkom
 Name:		drwright
 Version:	0.18
 Release:	1
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DrWright is a program that forces you to take wrist breaks to rest
 your hands.
 
-%description -l pl
-DrWright to program zmuszaj±cy do rozlu¼nienia nadgarstków, aby daæ
-odpocz±æ d³oniom.
+%description -l pl.UTF-8
+DrWright to program zmuszajÄ…cy do rozluÅºnienia nadgarstkÃ³w, aby daÄ‡
+odpoczÄ…Ä‡ dÅ‚oniom.
 
 %prep
 %setup -q
