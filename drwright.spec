@@ -1,5 +1,5 @@
 Summary:	A program that reminds you to take wrist breaks
-Summary(pl.UTF-8):   Program przypominający, żeby dać odpocząć nadgarstkom
+Summary(pl.UTF-8):	Program przypominający, żeby dać odpocząć nadgarstkom
 Name:		drwright
 Version:	0.18
 Release:	1
