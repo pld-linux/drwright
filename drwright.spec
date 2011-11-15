@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/drwright/3.2/%{name}-%{version}.tar.xz
-# Source0-md5:	5056d36520b0a506e5bf3211f08315b8
+# Source0-md5:	082bef2e925b7be677a35e32970b64ef
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
