@@ -1,12 +1,12 @@
 Summary:	A program that reminds you to take wrist breaks
 Summary(pl.UTF-8):	Program przypominający, żeby dać odpocząć nadgarstkom
 Name:		drwright
-Version:	3.2.2
+Version:	3.2.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/drwright/3.2/%{name}-%{version}.tar.xz
-# Source0-md5:	082bef2e925b7be677a35e32970b64ef
+# Source0-md5:	c23d1b9aefdbf31268b888f50826c164
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/*.la
 
 # already exists as zu
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/tmp
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/tmp
 
 %find_lang %{name}
 
